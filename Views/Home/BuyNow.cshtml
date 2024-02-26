@@ -1,0 +1,26 @@
+﻿@using MiniProject3.Models
+@model MiniProject3.Models.OrderTable
+@{
+    Layout = null;
+    ViewBag.Title = "OrderTable";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>BuyNow</title>
+</head>
+<body>
+    <form method="post">
+        <div>
+            <label>Enter your quantity</label>
+            @Html.TextBoxFor(c => c.Quantity,new {type = "number"}) <br /><br />
+
+            <input type="submit" value="ByNow"/> <br /> <br />
+            <label>@ViewBag.e</label>
+        </div>
+        </form>
+</body>
+</html>

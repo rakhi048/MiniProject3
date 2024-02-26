@@ -1,0 +1,42 @@
+﻿@using MiniProject3.Models
+@model MiniProject3.Models.Customer
+@{
+    ViewBag.Title = "Registration";
+}
+
+<h2>Registration</h2>
+<div>
+    <form id="frm" method="post">
+        <label>CustemerId</label>
+        @Html.TextBoxFor(c => c.Custid, new { id = "Custid", required = "required" }) <br /><br />
+        <label>Email</label>
+        @Html.TextBoxFor(c => c.Email, new { id = "Email", required = "required" }) <br /><br />
+        <label>Password</label>
+        @Html.PasswordFor(c => c.Pwd, new { id = "Pwd", required = "required" }) <br /><br />
+
+        <input type="submit" value="Register" onclick="Validation()" /> <br /><br />
+        <a href="Loginuser">Login</a><br /><br />
+        <a href="Menu">Menu</a><br /><br />
+
+        <label style="color:green">@ViewBag.e</label>
+    </form>
+
+    <script>
+        function Validation()
+        {
+            var custId = document.getElementById('Custid').value;
+            var email = document.getElementById('Email').value;
+            var password = document.getElementById('Pwd').value;
+
+                if(custId === "" || email === "" || password === "")
+                {
+                    alert("Please enter Customer ID, Email, and Password");
+                    return false;
+                    
+                }
+            
+            
+            return true; 
+        }
+    </script>
+</div>

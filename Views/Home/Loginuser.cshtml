@@ -1,0 +1,19 @@
+﻿@using MiniProject3.Models
+@model MiniProject3.Models.Customer
+@{
+
+    ViewBag.Title = "Loginuser";
+
+}
+    <div>
+        <form method="post">
+            <label>Enter email</label>
+            @Html.TextBoxFor(c => c.Email) <br /><br />
+            <label>Password</label>
+            @Html.PasswordFor(c => c.Pwd) <br /><br />
+            <input type="submit" class="form-control" /><br /><br />
+            <label>Click here for New User</label><a href="Registration">New User</a><br /><br />
+            <label>@ViewBag.e</label>
+        </form>
+    </div>
+
